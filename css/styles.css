@@ -12,6 +12,7 @@
   --header-background: #ffffff;
   --button-background: #f5f4fa;
   --hero-background: #c4c4c4;
+  --icon-color: #afb1b8;
 }
 
 h1,
@@ -135,7 +136,9 @@ body {
 }
 
 .header-contakt .link {
-  display: block;
+  /* display: block; */
+  display: flex;
+  align-items: center;
   color: var(--secondery-text-color);
 
   font-weight: 500;
@@ -147,17 +150,21 @@ body {
 .header-contakt .link:hover,
 .header-contakt .link:focus {
   color: var(--link-active);
+}
+
+.icon-mail,
+.icon-tel {
+  fill: #757575;
+  margin-right: 10px;
+}
+
+.header-contakt .link:hover .icon-mail,
+.header-contakt .link:focus .icon-mail,
+.header-contakt .link:hover .icon-tel,
+.header-contakt .link:focus .icon-tel {
   fill: var(--link-active);
 }
 
-.icon-mail {
-  background-color: tomato;
-  fill: "#757575";
-}
-
-.icon-mail:hover {
-  fill: var (--link-active);
-}
 /*---- Hero-----*/
 .hero {
   padding: 200px 452px;
@@ -296,10 +303,6 @@ body {
   background-color: var(--grey-background);
 }
 
-.team .list {
-  margin-left: -30px;
-}
-
 .team-card {
   flex-basis: calc((100%-90px) / 4);
   margin-left: 30px;
@@ -326,6 +329,47 @@ body {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+  margin-bottom: 16px;
+}
+
+.team-card .list {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.social-networks {
+  display: block;
+  flex-basis: calc(100% / 4-10px);
+
+  margin-right: 10px;
+}
+
+.social-networks:nth-child(4) {
+  margin-right: 0px;
+}
+.icon-social {
+  fill: var(--icon-color);
+}
+
+.social-networks .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  width: 44px;
+  height: 44px;
+}
+
+.social-networks .link:hover,
+.social-networks .link:focus {
+  background-color: var(--link-active);
+}
+
+.social-networks .link:hover .icon-social,
+.social-networks .link:focus .icon-social {
+  fill: var(--text-on-dark-background);
 }
 
 /*-- Clients-*/
@@ -335,21 +379,26 @@ body {
 }
 
 .clients-item .link {
-  display: block;
-  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 170px;
   height: 92px;
-}
-
-.logo-compani {
-  display: block;
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
 
 .logo-compani:hover,
 .logo-compani:focus {
-  border: 1px solid #2196f3;
+  border: 1px solid var(--link-active);
+}
+
+.icon-compani {
+  fill: var(--icon-color);
+}
+
+.logo-compani:hover .icon-compani,
+.logo-compani:focus .icon-compani {
   fill: var(--link-active);
 }
 
@@ -395,6 +444,33 @@ body {
 .address-contacts .link:hover,
 .address-contacts .link:focus {
   color: var(--link-active);
+}
+
+.footer .container {
+  display: flex;
+  align-items: center;
+}
+
+.join {
+  margin-left: 70px;
+}
+
+.join-text {
+  margin-bottom: 20px;
+  color: var(--text-on-dark-background);
+  text-transform: uppercase;
+}
+
+.join .list {
+  display: flex;
+}
+
+.join .link {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.icon-social-footer {
+  fill: var(--text-on-dark-background);
 }
 
 /*-- Portfolio-*/
